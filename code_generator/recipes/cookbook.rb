@@ -45,6 +45,25 @@ template "#{cookbook_dir}/.kitchen.yml" do
   action :create_if_missing
 end
 
+directory "#{cookbook_dir}/test/integration/default/serverspec" do
+  recursive true
+end
+
+template "#{cookbook_dir}/test/integration/default/serverspec/default.rb" do
+  source 'serverspec_default_spec.rb.erb'
+end
+
+# ChefSpec
+directory "#{cookbook_dir}/test/unit"
+
+%w( default_spec spec_helper ).each do |specfile|
+  template "#{cookbook_dir}/test/unit/#{specfile}.rb" do
+    source "chefspec_#{specfile}.rb.erb"
+    helpers(ChefDK::Generator::TemplateHelper)
+    action :create_if_missing
+  end
+end
+
 # Recipes
 
 directory "#{cookbook_dir}/recipes"
