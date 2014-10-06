@@ -20,8 +20,10 @@ end
 # chefignore
 cookbook_file "#{cookbook_dir}/chefignore"
 
-# Berks
-cookbook_file "#{cookbook_dir}/Berksfile" do
+# Librarian
+template "#{cookbook_dir}/Cheffile" do
+  source "Cheffile.erb"
+  helpers(ChefDK::Generator::TemplateHelper)
   action :create_if_missing
 end
 

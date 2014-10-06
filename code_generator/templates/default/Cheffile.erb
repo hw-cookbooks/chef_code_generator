@@ -1,0 +1,8 @@
+site 'https://supermarket.getchef.com/api/v1'
+
+cookbook '<%= @cookbook_name %>', :path => '.'
+
+group :integration do
+  cookbook 'apt'
+  cookbook 'yum'
+end
