@@ -1,4 +1,4 @@
-# Heavy Water Operations opinionated `code_generator` cookbook
+#### Heavy Water Operations opinionated `code_generator` cookbook
 
 This repo contains an opinionated fork of the `code_generator` cookbook which [ships as part of the ChefDK](https://github.com/opscode/chef-dk/tree/master/lib/chef-dk/skeletons/code_generator).
 
