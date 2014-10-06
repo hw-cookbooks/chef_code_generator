@@ -20,6 +20,17 @@ end
 # chefignore
 cookbook_file "#{cookbook_dir}/chefignore"
 
+# Bundler
+cookbook_file "#{cookbook_dir}/Gemfile"
+
+# Guard
+cookbook_file "#{cookbook_dir}/Guardfile"
+
+# Rubocop
+cookbook_file "#{cookbook_dir}/.rubocop.yml" do
+  source 'rubocop.yml'
+end
+
 # Librarian
 template "#{cookbook_dir}/Cheffile" do
   source "Cheffile.erb"
