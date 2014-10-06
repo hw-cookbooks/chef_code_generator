@@ -1,3 +1,6 @@
+AllCops:
+  Exclude:
+    - 'tmp/**/*'
 Style/FileName:
   Exclude:
     - 'Guardfile'
