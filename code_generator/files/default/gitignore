@@ -6,6 +6,7 @@ Cheffile.lock
 \#*#
 .*.sw[a-z]
 *.un~
+tmp/*
 
 # Bundler
 Gemfile.lock
