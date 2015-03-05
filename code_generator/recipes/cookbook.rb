@@ -17,6 +17,9 @@ template "#{cookbook_dir}/README.md" do
   action :create_if_missing
 end
 
+# CONTRIBUTING
+cookbook_file "#{cookbook_dir}/CONTRIBUTING.md"
+
 # chefignore
 cookbook_file "#{cookbook_dir}/chefignore"
 
