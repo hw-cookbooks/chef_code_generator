@@ -52,8 +52,14 @@ directory "#{cookbook_dir}/test/integration/default/serverspec" do
   recursive true
 end
 
-template "#{cookbook_dir}/test/integration/default/serverspec/default.rb" do
+template "#{cookbook_dir}/test/integration/default/serverspec/default_spec.rb" do
   source 'serverspec_default_spec.rb.erb'
+end
+
+directory "#{cookbook_dir}/test/integration/helpers/serverspec"
+
+template "#{cookbook_dir}/test/integration/helpers/serverspec/spec_helper.rb" do
+  source "serverspec_spec_helper.rb.erb"
 end
 
 # ChefSpec
