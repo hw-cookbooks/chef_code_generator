@@ -56,7 +56,9 @@ template "#{cookbook_dir}/test/integration/default/serverspec/default_spec.rb" d
   source 'serverspec_default_spec.rb.erb'
 end
 
-directory "#{cookbook_dir}/test/integration/helpers/serverspec"
+directory "#{cookbook_dir}/test/integration/helpers/serverspec" do
+  recursive true
+end
 
 template "#{cookbook_dir}/test/integration/helpers/serverspec/spec_helper.rb" do
   source "serverspec_spec_helper.rb.erb"
