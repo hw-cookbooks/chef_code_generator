@@ -13,6 +13,4 @@ gem 'chef', '~> 12.1'
 gem 'finstyle'
 gem 'guard-rubocop'
 gem 'guard-rspec'
-gem 'guard-foodcritic',
-  :git => 'https://github.com/Nordstrom/guard-foodcritic.git',
-  :ref => 'use_guard_v2_api'
+gem 'guard-foodcritic'
